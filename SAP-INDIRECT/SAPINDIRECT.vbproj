@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5FEFFA7-D6A1-4FF4-85F8-D30CFFA4782F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IpicIndirect.My.MyApplication</StartupObject>
+    <RootNamespace>IpicIndirect</RootNamespace>
+    <AssemblyName>IPIC-SAP-DI</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\10.10.0.7\ipic_di\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>IPIC-SAP-DI</ProductName>
+    <PublisherName>DMF</PublisherName>
+    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IPIC-SAP-DI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IPIC-SAP-DI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SAP-ipic.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>62833F20256E0A3BC52F1805E30A686396D7E697</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SAPINDIRECT_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>IPIC-SAP-DI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>IPIC-SAP-DI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\IO\source\repos\SAP_DI0012\SAP-INDIRECT\Reports\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>D:\A- System BAJA\Metro Modern UI net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>D:\A- System BAJA\Metro Modern UI net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BrowserFRM.Designer.vb">
+      <DependentUpon>BrowserFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowserFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAR.Designer.vb">
+      <DependentUpon>CreateAR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Class\hotkey.vb" />
+    <Compile Include="DMF\EDS CLASS\EDS_G_FUNC.vb" />
+    <Compile Include="DMF\EDS\EDS_Authorization.Designer.vb">
+      <DependentUpon>EDS_Authorization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Authorization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_FolderMaker.Designer.vb">
+      <DependentUpon>EDS_FolderMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_FolderMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Global_var.vb" />
+    <Compile Include="DMF\EDS\EDS_MachineList.Designer.vb">
+      <DependentUpon>EDS_MachineList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_MachineList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_mainMenuMaster.Designer.vb">
+      <DependentUpon>EDS_mainMenuMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_mainMenuMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_ModuleMaster.Designer.vb">
+      <DependentUpon>EDS_ModuleMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_ModuleMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_station.Designer.vb">
+      <DependentUpon>EDS_station.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_station.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Ticketing_Assigner.Designer.vb">
+      <DependentUpon>EDS_Ticketing_Assigner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Ticketing_Assigner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_User_master.Designer.vb">
+      <DependentUpon>EDS_User_master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_User_master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_MainMenu.Designer.vb">
+      <DependentUpon>EDS_MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_MainMenu.vb" />
+    <Compile Include="DMF\EDS\EDS_Warehouse.Designer.vb">
+      <DependentUpon>EDS_Warehouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Warehouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\batch_selectionForm.Designer.vb">
+      <DependentUpon>batch_selectionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\batch_selectionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\dmf_ModuleGenerator.Designer.vb">
+      <DependentUpon>dmf_ModuleGenerator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\dmf_ModuleGenerator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\dmf_NodeCreator.Designer.vb">
+      <DependentUpon>dmf_NodeCreator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\dmf_NodeCreator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\Inventory_MaxLevel.Designer.vb">
+      <DependentUpon>Inventory_MaxLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\Inventory_MaxLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\MBOS.Designer.vb">
+      <DependentUpon>MBOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\MBOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\Palleting.Designer.vb">
+      <DependentUpon>Palleting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\Palleting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\proration.Designer.vb">
+      <DependentUpon>proration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\Main\proration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Ticketing.Designer.vb">
+      <DependentUpon>EDS_Ticketing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Ticketing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Ticketing_Sender.Designer.vb">
+      <DependentUpon>EDS_Ticketing_Sender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\EDS\EDS_Ticketing_Sender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\Sub\SelectionModule.Designer.vb">
+      <DependentUpon>SelectionModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\Sub\SelectionModule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Forms\user_managemnt.Designer.vb">
+      <DependentUpon>user_managemnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\Forms\user_managemnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMF\Modules\Global_var.vb" />
+    <Compile Include="DMF\Modules\g_colors.vb" />
+    <Compile Include="DMF\User Control\uc_dgv_col_withArrow.Designer.vb">
+      <DependentUpon>uc_dgv_col_withArrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_dgv_col_withArrow.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_dropdown.Designer.vb">
+      <DependentUpon>uc_dropdown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_dropdown.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_msgnode.Designer.vb">
+      <DependentUpon>uc_msgnode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_msgnode.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_separatorH.Designer.vb">
+      <DependentUpon>uc_separatorH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_separatorH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_date.Designer.vb">
+      <DependentUpon>uc_date.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_date.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_finder.designer.vb">
+      <DependentUpon>uc_finder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_finder.vb" />
+    <Compile Include="DMF\User Control\uc_FinderH.Designer.vb">
+      <DependentUpon>uc_FinderH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_FinderH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_header.designer.vb">
+      <DependentUpon>uc_header.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_header.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_inputbox.Designer.vb">
+      <DependentUpon>uc_inputbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_inputbox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_label.Designer.vb">
+      <DependentUpon>uc_label.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_label.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_separatorV.Designer.vb">
+      <DependentUpon>uc_separatorV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_separatorV.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_sub_Header.Designer.vb">
+      <DependentUpon>uc_sub_Header.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_sub_Header.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_ticketBody.Designer.vb">
+      <DependentUpon>uc_ticketBody.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_ticketBody.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_time.Designer.vb">
+      <DependentUpon>uc_time.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_time.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_treenode.designer.vb">
+      <DependentUpon>uc_treenode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DMF\User Control\uc_treenode.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iLogin.Designer.vb">
+      <DependentUpon>iLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="iLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb" />
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PalletingFRM.Designer.vb">
+      <DependentUpon>PalletingFRM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PalletingFRM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\MBOS  CC.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MBOS  CC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Proration - SR.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Proration - SR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.vb">
+      <DependentUpon>Template.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Template.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BrowserFRM.resx">
+      <DependentUpon>BrowserFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAR.resx">
+      <DependentUpon>CreateAR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_Authorization.resx">
+      <DependentUpon>EDS_Authorization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_FolderMaker.resx">
+      <DependentUpon>EDS_FolderMaker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_MachineList.resx">
+      <DependentUpon>EDS_MachineList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_mainMenuMaster.resx">
+      <DependentUpon>EDS_mainMenuMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_ModuleMaster.resx">
+      <DependentUpon>EDS_ModuleMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_station.resx">
+      <DependentUpon>EDS_station.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_Ticketing_Assigner.resx">
+      <DependentUpon>EDS_Ticketing_Assigner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_User_master.resx">
+      <DependentUpon>EDS_User_master.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_MainMenu.resx">
+      <DependentUpon>EDS_MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_Warehouse.resx">
+      <DependentUpon>EDS_Warehouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\batch_selectionForm.resx">
+      <DependentUpon>batch_selectionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\dmf_ModuleGenerator.resx">
+      <DependentUpon>dmf_ModuleGenerator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\dmf_NodeCreator.resx">
+      <DependentUpon>dmf_NodeCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\Main\Inventory_MaxLevel.resx">
+      <DependentUpon>Inventory_MaxLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\Main\MBOS.resx">
+      <DependentUpon>MBOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\Main\Palleting.resx">
+      <DependentUpon>Palleting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\Main\proration.resx">
+      <DependentUpon>proration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_Ticketing.resx">
+      <DependentUpon>EDS_Ticketing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\EDS\EDS_Ticketing_Sender.resx">
+      <DependentUpon>EDS_Ticketing_Sender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\Sub\SelectionModule.resx">
+      <DependentUpon>SelectionModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\Forms\user_managemnt.resx">
+      <DependentUpon>user_managemnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_date.resx">
+      <DependentUpon>uc_date.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_dgv_col_withArrow.resx">
+      <DependentUpon>uc_dgv_col_withArrow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_dropdown.resx">
+      <DependentUpon>uc_dropdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_finder.resx">
+      <DependentUpon>uc_finder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_FinderH.resx">
+      <DependentUpon>uc_FinderH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_header.resx">
+      <DependentUpon>uc_header.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_inputbox.resx">
+      <DependentUpon>uc_inputbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_label.resx">
+      <DependentUpon>uc_label.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_msgnode.resx">
+      <DependentUpon>uc_msgnode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_separatorH.resx">
+      <DependentUpon>uc_separatorH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_separatorV.resx">
+      <DependentUpon>uc_separatorV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_sub_Header.resx">
+      <DependentUpon>uc_sub_Header.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_ticketBody.resx">
+      <DependentUpon>uc_ticketBody.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_time.resx">
+      <DependentUpon>uc_time.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMF\User Control\uc_treenode.resx">
+      <DependentUpon>uc_treenode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iLogin.resx">
+      <DependentUpon>iLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PalletingFRM.resx">
+      <DependentUpon>PalletingFRM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MBOS  CC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MBOS  CC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Proration - SR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Proration - SR.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SAPINDIRECT_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMicrosoft.Vbe.Interop.Forms">
+      <Guid>{0D452EE1-E08F-101A-852E-02608C4D0BB4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Vbe.Interop.Forms">
+      <Guid>{0D452EE1-E08F-101A-852E-02608C4D0BB4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30090}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_CsJ05WEGfunYMLGfsT2sXA.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading_12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DMF\Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IPIC-INDIRECT.ico" />
+    <None Include="Resources\icons8-end-96 fill.png" />
+    <None Include="Resources\icons8-end-96.png" />
+    <None Include="Resources\icons8-exe-50.png" />
+    <None Include="Resources\icons8-folder-16.png" />
+    <None Include="Resources\icons8-play-96 fill.png" />
+    <None Include="Resources\icons8-play-96.png" />
+    <None Include="Resources\icons8-repeat-96 fill.png" />
+    <None Include="Resources\icons8-repeat-96.png" />
+    <None Include="Resources\icons8-skip-to-start-96 fill.png" />
+    <None Include="Resources\icons8-skip-to-start-96.png" />
+    <None Include="Resources\icons8-arrow-96.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\Excel.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Reports\icons8-menu-128.png" />
+    <None Include="Reports\icons8-info-popup-96.png" />
+    <None Include="Resources\icons8-add-image-96.png" />
+    <None Include="Resources\icons8-image-file-add-96.png" />
+    <None Include="Resources\icons8-image-100.png" />
+    <None Include="Resources\GoldArrow2.png" />
+    <None Include="Resources\goldArrow.png" />
+    <Content Include="Resources\icons8-triangle-arrow-24.png" />
+    <None Include="Resources\Arrow Down.bmp" />
+    <None Include="Resources\icons8-x-50.png" />
+    <None Include="Resources\left max.png" />
+    <None Include="Resources\left.png" />
+    <None Include="Resources\notification.png" />
+    <None Include="Resources\phone.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\Profile.png" />
+    <None Include="Resources\Q_mark.png" />
+    <None Include="Resources\ReFresh.png" />
+    <None Include="Resources\right.png" />
+    <None Include="Resources\RightMax.png" />
+    <None Include="Resources\maximize.png" />
+    <None Include="Resources\restore.png" />
+    <None Include="Resources\ms jpg.png" />
+    <None Include="Resources\ms png.png" />
+    <None Include="Resources\ms excel.png" />
+    <None Include="Resources\ms word.png" />
+    <Content Include="SAP-ipic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

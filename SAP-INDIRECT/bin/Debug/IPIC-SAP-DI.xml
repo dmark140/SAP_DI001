@@ -1,0 +1,199 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+IPIC-SAP-DI
+</name>
+</assembly>
+<members>
+<member name="T:IpicIndirect.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.Add">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.email">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.Excel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.find">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.goldArrow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.GoldArrow2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.icons8_add_image_96">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.icons8_arrow_96">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.icons8_image_100">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.icons8_image_file_add_96">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.icons8_info_popup_96">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.icons8_menu_128">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.icons8_x_50">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.left">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.left_max">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.maximize">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.ms_excel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.ms_jpg">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.ms_png">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.ms_word">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.notification">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.phone">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.print">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.Profile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.Q_mark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.ReFresh">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.restore">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.right">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IpicIndirect.My.Resources.Resources.RightMax">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:IpicIndirect.hotkey.RegisterHotKey(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Declaration of winAPI function wrappers. The winAPI functions are used to register / unregister a hotkey
+ </summary>
+</member>
+<member name="M:IpicIndirect.Global_var.iSQL_selector(System.String,System.Windows.Forms.DataGridView,System.Boolean@,System.Int32)">
+<summary>
+iSQL_ID =  @Select_id in spDMF_DI001
+
+</summary>
+
+</member>
+<member name="M:IpicIndirect.Global_var.iIfIsEmpty(System.String,System.String)">
+ <summary>
+ This Function Trigers Notification panel if empty
+ </summary>
+</member>
+<member name="M:IpicIndirect.MainMenu.g_notif_panel(System.Int32,System.String@,System.Int32)">
+ <summary>
+ Notification_type
+ 0 =  Error 
+ 1 =  Success
+ 2 =  Warning
+ Notification_time
+ 1 = short
+ 2 = long
+ </summary>
+</member>
+</members>
+</doc>
